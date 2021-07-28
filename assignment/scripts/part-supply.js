@@ -18,9 +18,6 @@ console.log(supplyChanges);
 // 3. Console log the value of the second item in the 'supplyChanges' array
 
 console.log('3. Second supplyChange is:');
-let newArray = ["this", "is", "an", "array"];
-
-console.log(newArray[1]);
 
 console.log(supplyChanges[1]);
 
@@ -29,11 +26,16 @@ console.log(supplyChanges[1]);
 
 console.log('4. Removed item:');
 
+supplyChanges.pop();
+console.log(supplyChanges);
+
 
 // 5. A delivery of 25 more parts arrived. Add the value 25 to the end of the array
 
 console.log('5. Adding 25 to supplyChanges.');
 
+supplyChanges.push(25);
+console.log(supplyChanges);
 
 // 6. Write a `for` loop that shows each value in the 'supplyChanges' array
 //    Use a console.log formatted as follows, where x is the value from the array
@@ -41,7 +43,28 @@ console.log('5. Adding 25 to supplyChanges.');
 //    - if the value is 0, log 'No Change.'
 //    - if the value is negative, format the log as 'Removed x parts.'
 console.log('6. Showing supplyChanges...');
-
+for (let i=0; i<supplyChanges.max;i++){
+do {
+  console.log('added x parts.');
+} while (supplyChanges[i]>0);
+i++
+}
+/*
+for (let i = 0; i<supplyChanges.max; i++){
+  while (supplyChanges[i]>0){
+    console.log('added x parts');
+    i++;
+  }
+  while (supplyChanges[i] === 0){
+    console.log('No Change.');
+    i++;
+  }
+  while (supplyChanges[i]<1){
+    console.log('Removed x parts');
+    i++;
+  }
+}
+*/
 
 // STRETCH GOALS
 console.log('---  Stretch Goals  ---');
