@@ -45,14 +45,15 @@ console.log(supplyChanges);
 console.log('6. Showing supplyChanges...');
 
 for (i=0; i<supplyChanges.length; i++){
-  if (supplyChanges[i]>0){
-    console.log(`added ${supplyChanges[i]} parts`);
+  let supply = supplyChanges[i];
+  if (supply>0){
+    console.log(`Added ${supply} parts.`);
   }
-  else if (supplyChanges[i] === 0){
+  else if (supply === 0){
     console.log('No Change.');
   }
-  else if (supplyChanges[i]<1){
-    console.log(`Removed ${supplyChanges[i]} parts`);
+  else if (supply < 1){
+    console.log(`Removed ${supply} parts.`);
   }
 }
 
@@ -62,29 +63,42 @@ console.log('---  Stretch Goals  ---');
 // 7. Rewrite the `for` loop from #6 as a `for of` loop.
 console.log('7. Showing supplyChanges with "for of" loop');
 
+for (let supply of supplyChanges){
+  if (supply > 0){
+    console.log(`Added ${supply} parts.`);
+  }
+  else if (supply === 0){
+    console.log('No Change.');
+  }
+  else if (supply < 1){
+    console.log(`Removed ${supply} parts.`);
+  }
+}
 
 // 8. Rewrite the `for` loop from #6 as a `while` loop.
 console.log('8. Showing supplyChanges with "while" loop');
 
+//while supplyChanges.length > i (end state i = length)
 
+// [3, 5, -6, 0, 7, 25]
 
 i = 0;
 
-
-while (supplyChanges[i]){
+while (supplyChanges.length > i){
+  // console.log(`loop number ${i} is ${supplyChanges[i]}`);
   if (supplyChanges[i] > 0){
     console.log(`added ${supplyChanges[i]} parts`);
-    i++;
   }
   else if (supplyChanges[i] === 0){
     console.log('No Change.');
-    i++;
   }
   else {
     console.log(`Removed ${supplyChanges[i]} parts`);
-    i++;
   }
-  }
+  i++;
+}
+
+
 
 
 // 9. Write a loop to determine the total number of parts available by
@@ -92,6 +106,7 @@ while (supplyChanges[i]){
 console.log('9. Total supplies available is:');
 
 //checking array values
+
 console.log(supplyChanges);
 
 let totalParts = 0;
