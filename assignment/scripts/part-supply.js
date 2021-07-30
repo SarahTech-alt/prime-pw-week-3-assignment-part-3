@@ -86,14 +86,15 @@ i = 0;
 
 while (supplyChanges.length > i){
   // console.log(`loop number ${i} is ${supplyChanges[i]}`);
-  if (supplyChanges[i] > 0){
-    console.log(`added ${supplyChanges[i]} parts`);
+  let supply = supplyChanges[i];
+  if (supply > 0){
+    console.log(`added ${supply} parts`);
   }
-  else if (supplyChanges[i] === 0){
+  else if (supply === 0){
     console.log('No Change.');
   }
   else {
-    console.log(`Removed ${supplyChanges[i]} parts`);
+    console.log(`Removed ${supply} parts`);
   }
   i++;
 }
