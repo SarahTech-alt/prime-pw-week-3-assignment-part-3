@@ -26,7 +26,9 @@ console.log(supplyChanges[1]);
 
 console.log('4. Removed item:');
 
-supplyChanges.pop();
+//removing item and logging to console
+
+console.log(supplyChanges.pop());
 console.log(supplyChanges);
 
 
@@ -44,7 +46,7 @@ console.log(supplyChanges);
 //    - if the value is negative, format the log as 'Removed x parts.'
 console.log('6. Showing supplyChanges...');
 
-for (i=0; i<supplyChanges.length; i++){
+for (let i=0; i<supplyChanges.length; i++){
   let supply = supplyChanges[i];
   if (supply>0){
     console.log(`Added ${supply} parts.`);
@@ -84,7 +86,8 @@ console.log('8. Showing supplyChanges with "while" loop');
 i = 0;
 
 while (supplyChanges.length > i){
-  // console.log(`loop number ${i} is ${supplyChanges[i]}`);
+  // Checking steps of the function
+  //console.log(`loop number ${i} is ${supplyChanges[i]}`);
   let supply = supplyChanges[i];
   if (supply > 0){
     console.log(`added ${supply} parts`);
@@ -109,9 +112,14 @@ console.log('9. Total supplies available is:');
 
 console.log(supplyChanges);
 
+//Summing all elements of the array
+
 let totalParts = 0;
 
 for (i=0; i<supplyChanges.length; i++){
   totalParts += supplyChanges[i];
 }
+
+//Checking output of loop
+
 console.log(totalParts);
